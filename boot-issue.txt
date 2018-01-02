@@ -1,0 +1,13 @@
+
+    a) sudo mount /dev/sdaX /mnt  # Make "X" the partition that has Ubuntu installed (i.e. /dev/sda2).
+    b) for i in /sys /proc /run /dev; do sudo mount --bind "$i" "/mnt/$i"; done
+    c) sudo chroot /mnt
+    d) update-grub
+    e) if no errors skip this "e" section
+        grub-install /dev/sdX (x is the hard drive that has linux installed (i.e. /dev/sda)
+        update-grub
+5) Reboot the system
+
+
+link :: 
+https://pastebin.com/B5kc8RzX
